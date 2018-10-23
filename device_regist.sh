@@ -65,8 +65,16 @@ echo "=============================================================="
 echo "#!/bin/bash" | tee ./google_assistant.sh > /dev/null
 echo "python3 -m venv env" | tee -a ./google_assistant.sh > /dev/null
 echo "source env/bin/activate" | tee -a ./google_assistant.sh > /dev/null
+echo "aplay $Origin/startup.wav" | tee -a ./google_assistant.sh > /dev/null
 echo "cd new-project" | tee -a ./google_assistant.sh > /dev/null
 echo "python -m pushtotalk --project-id  $ProjectID --device-model-id $DeviceModelID --lang en-us" | tee -a ./google_assistant.sh > /dev/null
+
+echo "=============================================================="
+echo " Create auto startup script for sample application"
+echo "=============================================================="
+echo "#!/bin/bash" | tee ./google_assistant_startup.sh > /dev/null
+echo "cd $Origin" | tee -a ./google_assistant_startup.sh > /dev/null
+echo "bash google_assistant.sh" | tee -a ./google_assistant_startup.sh > /dev/null
 
 chmod +x *.sh
 
