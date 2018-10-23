@@ -83,4 +83,5 @@ chmod +x *.sh
 echo "=============================================================="
 echo " Deice Registration Finished! Run sample application as"
 echo " '$ ./google_assistant.sh'"
+echo " Auto run google assistant if reboot a device"
 echo "=============================================================="
