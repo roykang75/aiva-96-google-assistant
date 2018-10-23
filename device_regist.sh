@@ -76,6 +76,8 @@ echo "#!/bin/bash" | tee ./google_assistant_startup.sh > /dev/null
 echo "cd $Origin" | tee -a ./google_assistant_startup.sh > /dev/null
 echo "bash google_assistant.sh" | tee -a ./google_assistant_startup.sh > /dev/null
 
+sudo cp ./google_assistant_startup.sh /etc/profile.d/
+
 chmod +x *.sh
 
 echo "=============================================================="
